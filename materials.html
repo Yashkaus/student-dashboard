@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title> Materials </title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- external css file that is common in all pages of student dashboard for side menu and nav bar -->
+  <link rel="stylesheet" href="css/common.css" />
+  <!-- external css file for materials section-->
+  <link rel="stylesheet" href="css/materials.css" />
+
+  <!--font awesome-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+<body>
+
+  <!-- nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand logoMiniguru" href="#">Miniguru</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <form class="form-inline my-2 my-lg-0 ">
+          <input class="form-control form-control-dark searchBar" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-primary" style="background-color:#cc5500; border:none;">search</button>
+        </form>
+
+        <li class="nav-item dropdown userPhoto">
+          <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user" style="font-size:2rem;color:#fff;"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#"><i class="fas fa-home"></i> Home</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="yourvideos.html"><i class="fas fa-video"></i> Your videos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="settings.html"><i class="fas fa-cog"></i> Account Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#"><i class="fas fa-question-circle"></i> Help</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> SignOut</a>
+          </div>
+        </li>
+        <li class="nav-item bell">
+          <a class="nav-link " href="#"><i class="fas fa-bell" style="font-size:2rem;color:#fff;"></i></a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+  <!-- nav bar ends here -->
+
+  <!--  start of side menu for dshboard planner materials upload and wallet -->
+
+  <input type="checkbox" id="check">
+  <label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+  </label>
+  <section id="sideMenu">
+    <nav>
+      <a href="dashboard.html"><i class="fas fa-tachometer-alt-slowest" style="font-size:1.4rem; padding-right: 1rem; color:#cc5500;"></i>Dashboard</a>
+      <hr /><a href="planner.html"> <i class="fas fa-mind-share" style="font-size:1.4rem; padding-right: 1rem; color:#cc5500;"></i>Planner </a>
+      <hr /><a href="materials.html" class="active"><i class="fas fa-hammer" style="font-size:1.4rem; padding-right: 1rem; color:#cc5500;"></i> Materials </a>
+      <hr /><a href="upload.html"> <i class="fas fa-upload" style="font-size:1.4rem; padding-right: 1rem; color:#cc5500;"></i>Upload </a>
+      <hr /><a href="wallet.html"> <i class="fas fa-wallet" style="font-size:1.4rem; padding-right: 1rem; color:#cc5500;"></i> Wallet</a>
+      <hr /><a href="progress.html"> <i class="fas fa-chart-bar" style="font-size:1.4rem; padding-right: 1rem; color:#cc5500;"></i> Progress</a>
+      <hr /><a href="ideas.html"> <i class="fas fa-lightbulb-on" style="font-size:1.4rem; padding-right: 1rem; color:#cc5500;"></i> Idea collection</a>
+      <hr />
+    </nav>
+
+  </section>
+
+  <!-- side menu ends here -->
+
+  <!--- section for materials -->
+  <div class="row materials">
+    <div class="col-lg-12 col-sm-12" style="margin-bottom:3rem;">
+      <div style="background-color:#042331; border:2px solid #cc5500;color:#fff;padding:1rem;">
+        <h4 style="display:inline; margin-right:5rem;">Materials list</h4>
+        <input type="text" placeholder="search" style="border:1px solid #000; border-radius:6%;height:2.5rem;padding-left:8px;" />
+      </div>
+      <div class="materisAndTools">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">unit size</th>
+              <th scope="col">unit price</th>
+              <th scope="col">material name</th>
+
+              <th scope="col">image</th>
+              <th scope="col" class="quantity">quantity</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.3</td>
+              <td>pen</td>
+              <td><img src="images/pic1.jpg" /></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.8</td>
+              <td>pencil</td>
+
+              <td><img src="images/pic2.jpg" /></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>0.5</td>
+
+              <td>eraser</td>
+
+              <td>
+                <img src="images/pic3.jpg" />
+              </td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+
+              <td>Sharpener</td>
+
+              <td><img src="images/pic4.jpg" /></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+
+              <td>A4 paper</td>
+
+              <td><img src="images/pic5.jpg" /></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+
+              <td>Punching machine</td>
+
+              <td><img src="images/pic6.jpg" /></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+
+              <td>Stapler and pin</td>
+
+              <td><img src="images/pic8.jpg" /></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+
+              <td>Guntacker and pin</td>
+
+              <td><img src="images/pic9.jpg" /></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+            <tr>
+
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Water color Set</td>
+
+              <td><img src="images/pic10.jpg" /></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+            <tr>
+
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Fabric color Set</td>
+
+              <td><img src="images/pic11.jpg" /></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+            <tr>
+
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Glass color set</td>
+
+              <td><img src="images/pic12.jpg" /></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="col-lg-12 col-sm-12 tools">
+      <div style="background-color:#042331; border:2px solid #cc5500;color:#fff;padding:1rem;">
+        <h4 style="display:inline; margin-right:5rem;">Tools list</h4>
+        <input type="text" placeholder="search" style="border:1px solid #000; border-radius:6%;height:2.5rem;padding-left:8px;" />
+
+      </div>
+      <div class="materisAndTools">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">unit size</th>
+              <th scope="col">unit price</th>
+              <th scope="col">Tool name</th>
+              <th scope="col">image</th>
+              <th scope="col">quantity</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Paper cutter (Diff size) +blade</td>
+
+              <td></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Scissors (Diff size)</td>
+              <td></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>hand Saw ((Diff size)</td>
+              <td></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Glass cutter</td>
+              <td></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Photo Cutter</td>
+              <td></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Carving Tools</td>
+              <td></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Electric wire cutter</td>
+              <td></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Pliers cum cutter</td>
+              <td></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Water color Set</td>
+              <td></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Table vises</td>
+              <td></td>
+
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="" name="" value=""></td>
+              <td>1</td>
+              <td>1.6</td>
+              <td>Hammer</td>
+              <td></td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <a href="planner.html"><button class="btn">Previuos</button></a>
+    <a href="upload.html"><button class="btn">Next</button></a>
+  </div>
+  <!-- materials section ends here -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
